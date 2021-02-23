@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namta practice</title>
+</head>
+<body>
+    
+    <style>
+        #heading{
+            padding: 20px 0;
+        }
+        #heading span{
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        #output p{
+            display: inline-block;
+            background: red;
+            color: white;
+            padding:5px 10px ;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+    <h2>Even numbers between tow inputs</h2>
+    <input id="input-1" type="number">
+    <input id="input-2" type="number">
+    <button onclick="dataPass()">click</button>
+    <div id="heading"></div>
+
+    <script>
+
+        function dataPass(){
+            var firstInput = document.getElementById('input-1').value
+            var secondInput = document.getElementById('input-2').value
+
+            var result = ''
+            for (var i = firstInput; i <= secondInput; i ++){
+               
+                if(i%2 == 0){
+                    result += '<span>' + i + '</span>'
+                }
+                document.getElementById('heading').innerHTML = result
+            }
+            
+        } 
+
+
+    </script>
+        <h2>Odd numbers between tow inputs</h2>
+        <input type="number" id="third_input">
+        <input type="number" id="fourth_input">
+        <button onclick="oddPass()">click</button>
+        <div id="output" ></div>
+
+        <script>
+            function oddPass(){
+                var get_value_1 = Number(document.getElementById('third_input').value)
+                var get_value_2 = Number(document.getElementById('fourth_input').value)
+
+                var Oddition = ''
+                for( var i = get_value_1; i <= get_value_2; i ++ ){ 
+                    if( i%2 == 1){
+                        Oddition += "<p>" + i + "</p>"
+                    }
+                }
+                // document.getElementById('output').innerHTML = Oddition
+                document.write(Oddition)
+
+            }
+        </script>
+
+    
+        
+
+
+    <script src="script.js"></script>
+</body>
+</html>
